@@ -65,7 +65,6 @@ def logout( do_logout ):
     """Session logout"""
     if do_logout:
         session.pop( "account" )
-        emit( "load_page" , f"http://127.0.0.1:8000/" )
 
 
 # App Routes
@@ -73,5 +72,5 @@ def logout( do_logout ):
 def index():
     # Set some session data early
     session[ "page" ] = "index"
-    
+
 
